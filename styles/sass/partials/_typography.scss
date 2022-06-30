@@ -1,0 +1,23 @@
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 7rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+}
+
+span {
+    color: transparent;
+    display: block;
+    font-size: 10rem;
+    animation: flickerAnimation 3s ease-out infinite;
+}
+
+em {
+    font-style: normal;
+    font-weight: bold;
+}

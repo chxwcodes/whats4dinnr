@@ -1,0 +1,410 @@
+html {
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+figcaption,
+figure,
+main {
+  display: block;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: inherit;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+audio,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+img {
+  border-style: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html [type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type=checkbox],
+[type=radio] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-cancel-button,
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details,
+menu {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+canvas {
+  display: inline-block;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.wrapper {
+  max-width: 1250px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 7rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+span {
+  color: transparent;
+  display: block;
+  font-size: 10rem;
+  -webkit-animation: flickerAnimation 3s ease-out infinite;
+          animation: flickerAnimation 3s ease-out infinite;
+}
+
+em {
+  font-style: normal;
+  font-weight: bold;
+}
+
+/* ANIMATIONS */
+@-webkit-keyframes flickerAnimation {
+  0% {
+    text-shadow: rgba(58, 134, 255, 0.3) 0px 0px 24px;
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    text-shadow: rgb(58, 134, 255) 0px 0px 24px;
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
+  }
+  100% {
+    text-shadow: rgba(58, 134, 255, 0.3) 0px 0px 24px;
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.3);
+  }
+}
+@keyframes flickerAnimation {
+  0% {
+    text-shadow: rgba(58, 134, 255, 0.3) 0px 0px 24px;
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    text-shadow: rgb(58, 134, 255) 0px 0px 24px;
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
+  }
+  100% {
+    text-shadow: rgba(58, 134, 255, 0.3) 0px 0px 24px;
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.3);
+  }
+}
+/* ABOUT SECTION */
+.about p {
+  text-align: center;
+}
+
+/* FORM SECTION */
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.optionalFields {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 48%;
+}
+
+input[type=submit] {
+  margin-top: 20px;
+}
+
+/* RESULTS SECTION */
+.resultsInfo,
+.resultsInstructions {
+  width: 75%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+ol {
+  margin: 0;
+}
+
+.facts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.facts p {
+  margin-right: 20px;
+}
+
+.facts p:last-child {
+  margin-left: 0;
+}
