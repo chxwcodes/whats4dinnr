@@ -24,8 +24,15 @@ recipeApp.recipeSearch = (ingredients, calories, diet) => {
             addRecipeInformation: true,
         }
     }).then(function (recipeResults) {
-        //display the recipe onto the DOM
+        //if there are no results: tell the user there are no results
+        if (recipeResults.totalResults === 0) {
+            $resultsInfo.html(`<h2>There are no recipes based on your inputs.</h2>`);
+        }
+
+        //if there are results: display the recipe onto the DOM
         recipeApp.displayRecipe(recipeResults);
+
+        
     })
 }
 
