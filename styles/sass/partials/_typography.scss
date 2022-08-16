@@ -1,23 +1,19 @@
-h1 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 7rem;
-    text-transform: uppercase;
+html {
+    font-size: 125%;
+    font-family: $bodyFont;
+    font-weight: 400;
+}
+
+h1, h2 {
+    font-family: $headingFont;
     text-align: center;
     margin: 0;
 }
 
+h1 {
+    font-size: 3rem;
+}
+
 h2 {
-    margin: 0;
-}
-
-span {
-    color: transparent;
-    display: block;
-    font-size: 10rem;
-    animation: flickerAnimation 3s ease-out infinite;
-}
-
-em {
-    font-style: normal;
-    font-weight: bold;
+    font-size: 1.7rem;
 }

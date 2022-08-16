@@ -1,13 +1,14 @@
 //An app that decides what you should make based on what ingredients you have in your fridge and pantry
 
-//Global jquery variables
-const $resultsInfo = $('.resultsInfo');
-const $resultsSteps = $('.resultsSteps');
-const $h3 = $('h3');
-
 //The mighty recipeApp obj
 const recipeApp = {};
 
+//jquery variables
+recipeApp.$resultsInfo = $('.resultsInfo');
+recipeApp.$resultsSteps = $('.resultsSteps');
+recipeApp.$h3 = $('h3');
+
+//api key
 recipeApp.apiKey = 'c3a2dd22ab68486693f350a7d15abe53';
 
 //define a function that will make a request to the search endpoint using the user's provided arguments
@@ -26,9 +27,12 @@ recipeApp.recipeSearch = (ingredients, calories, diet) => {
     }).then(function (recipeResults) {
         //if there are no results: tell the user there are no results
         if (recipeResults.totalResults === 0) {
-            $resultsInfo.html(`<h2>There are no recipes based on your inputs.</h2>`);
+            recipeApp.$resultsInfo.html(`<h2>There are no recipes based on your inputs.</h2>`);
+
+            recipeApp.$h3.text('');
         }
 
+        console.log(recipeResults)
         //if there are results: display the recipe onto the DOM
         recipeApp.displayRecipe(recipeResults);
 
@@ -64,9 +68,9 @@ recipeApp.displayRecipe = (recipeObject) => {
     `;
 
     //actually putting the info onto the recipe info section
-    $resultsInfo.html(recipeInfoHTML);
+    recipeApp.$resultsInfo.html(recipeInfoHTML);
 
-    $h3.text('Instructions');
+    recipeApp.$h3.text('Instructions');
 
     //display the recipe's list of steps
     recipeObject.results[recipeNum].analyzedInstructions[0].steps.forEach((step) => {
@@ -74,7 +78,7 @@ recipeApp.displayRecipe = (recipeObject) => {
         const recipeStep = `<li>${step.step}`;
         
         //display each step into the DOM
-        $resultsSteps.append(recipeStep);
+        recipeApp.$resultsSteps.append(recipeStep);
     })
 }
 
@@ -94,7 +98,7 @@ recipeApp.init = () => {
             alert('Please enter at least ONE ingredient you have into the search bar! 🍗');
         } else {
             //target the results instructions and clear the previous instructions so the new one can be displayed
-            $resultsSteps.empty();
+            recipeApp.$resultsSteps.empty();
 
             //call the API to search some recipes based on user's inputs
             recipeApp.recipeSearch($userIngredients, $userCalories, $userDiet);

@@ -9,72 +9,116 @@
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Roboto&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Elsie&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
 
     <!-- css -->
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
     <main>
-        <div class="wrapper">
-            <!-- ABOUT APP SECTION -->
-            <section class="about">
-                <h1><span>¯\_(ツ)_/¯</span>🍴What's 4 Dinnr?🍴</h1>
-                <p>Do you struggle with deciding on what to cook with what's left in your fridge? Or ever wondered what you're going to make at the end of a hard day at work? Or you're at a loss on what yummy ingredients you need to buy on your next grocery run?</p>
+        <!-- ABOUT APP SECTION -->
+        <header>
+            <p>Plan your meals a lot easier</p>
+            <h1>What’s 4 Dinnr?</h1>
+
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#userIngredients">Search</a></li>
+                    <li><a href="https://spoonacular.com/food-api" target="_blank">API</a></li>
+                    <li><a href="#" target="_blank">Designer</a></li>
+                </ul>
+            </nav>
+
+            <div class="wrapper">
                 
-                <p><em>Look no further! Let this app decide for you!</em></p>
-
-                <p>Just make sure to type down the ingredients you have in your fridge below (multiple foods needs to be seperated with commas).</p>
-            </section> <!-- END about app section -->
-
-            <!-- FOOD FORM -->
-            <form action="">
-                <!-- INGREDIENTS THE USER HAVE -->
-                <label for="userIngredients">Foods I Have:</label>
-                <input type="text" placeholder="lettuce, chicken" id="userIngredients">
-
-                <!-- OPTIONAL FIELDS -->
-                <fieldset class="optionalFields">
-                    <!-- MAX CALORIE LIMIT -->
-                    <div class="option">
-                        <label for="userCalories">Max Calories:</label>
-                        <input type="number" value="600" id="userCalories">
-                    </div>
-
-                    <!-- USER DIET RESTRICTIONS -->
-                    <div class="option">
-                        <label for="userDiet">Dietary Restrictions:</label>
-                        <select id="userDiet">
-                            <option value="" selected>None</option>
-                            <option value="glutenFree">Gluten Free</option>
-                            <option value="ketogenic">Keto</option>
-                            <option value="vegetarian">Vegetarian</option>
-                            <option value="ovoVegetarian">Ovo-Vegetarian</option>
-                            <option value="vegan">Vegan</option>
-                            <option value="pescetarian">Pescetarian</option>
-                            <option value="paleo">Paleo</option>
-                            <option value="primal">Primal</option>
-                            <option value="whole30">Whole 30</option>
-                        </select><!--END user diet restriction -->
-                    </div>
-                </fieldset>
-
-                <input type="submit" value="Recipe Me!">
-            </form> <!--END food form -->
-
-            <!-- RECIPE RESULTS SECTION -->
-            <section class="resultsInfo">
+                <section class="headerInfo">
+                    <!-- HEADER INFO CONTAINER -->
+                    <div class="headerInfoContainer">
+                        <h2>Find endless recipes from the ingredients in your fridge!</h2>
+                        <a href="#userIngredients">Add ingredients</a>
                 
-            </section> <!--END resultsInfo section -->
+                        <p>Do you struggle with deciding on what to cook with what's left in your fridge? Or ever wondered what you're going to make at the end of a hard day at work? Or you're at a loss on what yummy ingredients you need to buy on your next grocery run?</p>
+                
+                        <p>Let this app decide for you! Just make sure to type down the ingredients you have in your fridge below (multiple foods needs to be seperated with commas).</p>
+                
+                
+                    </div> <!--END headerinfocontainer-->
+                
+                    <ul class="recipeImgs">
+                        <li>
+                            <img src="https://images.unsplash.com/photo-1504387720438-88468770d0fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFuYW5hJTIwY2FrZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                                alt="">
+                            <p>Banana cake</p>
+                        </li>
+                    </ul>
+                </section> <!--END header info-->
+            </div> <!--END wrapper-->  
+            
+            <ul class="ingredientList">
+                <li>Onion</li>
+                <li>Blueberry</li>
+                <li>Heavy Cream</li>
+                <li>Noodles</li>
+                <li>Bread</li>
+                <li>Potato</li>
+                <li>Flour</li>
+                <li>Milk</li>
+                <li>Broccoli</li>
+                <li>Garlic</li>
+            </ul>
+        </header> <!--END header -->
 
-            <!-- RESULTS STEPS SECTION -->
-            <section class="resultsInstructions">
-                <h3></h3>
-                <ol class="resultsSteps">
-                    
-                </ol>
-            </section> <!--END resultsSteps section-->
-        </div> <!--END wrapper-->
+        <!-- FOOD FORM -->
+        <form action="">
+            <!-- INGREDIENTS THE USER HAVE -->
+            <label for="userIngredients">Foods I Have:</label>
+            <input type="text" placeholder="lettuce, chicken" id="userIngredients">
+
+            <!-- OPTIONAL FIELDS -->
+            <fieldset class="optionalFields">
+                <!-- MAX CALORIE LIMIT -->
+                <div class="option">
+                    <label for="userCalories">Max Calories:</label>
+                    <input type="number" value="600" id="userCalories">
+                </div>
+
+                <!-- USER DIET RESTRICTIONS -->
+                <div class="option">
+                    <label for="userDiet">Dietary Restrictions:</label>
+                    <select id="userDiet">
+                        <option value="" selected>None</option>
+                        <option value="glutenFree">Gluten Free</option>
+                        <option value="ketogenic">Keto</option>
+                        <option value="vegetarian">Vegetarian</option>
+                        <option value="ovoVegetarian">Ovo-Vegetarian</option>
+                        <option value="vegan">Vegan</option>
+                        <option value="pescetarian">Pescetarian</option>
+                        <option value="paleo">Paleo</option>
+                        <option value="primal">Primal</option>
+                        <option value="whole30">Whole 30</option>
+                    </select><!--END user diet restriction -->
+                </div>
+            </fieldset>
+
+            <input type="submit" value="Recipe Me!">
+        </form> <!--END food form -->
+
+        <!-- RECIPE RESULTS SECTION -->
+        <section class="resultsInfo">
+            
+        </section> <!--END resultsInfo section -->
+
+        <!-- RESULTS STEPS SECTION -->
+        <section class="resultsInstructions">
+            <h3></h3>
+            <ol class="resultsSteps">
+                
+            </ol>
+        </section> <!--END resultsSteps section-->
+      
     </main> <!--END main-->
 
     <!-- javascript -->
