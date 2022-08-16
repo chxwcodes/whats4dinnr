@@ -26,6 +26,13 @@ img {
     display: block;
 }
 
+fieldset, input, button, select {
+    border: 2px solid $salmon;
+    margin: 0;
+    padding: 10px;
+    background-color: transparent;
+}
+
 .wrapper {
     max-width: 1200px;
     width: 90%;

@@ -284,6 +284,13 @@ img {
   display: block;
 }
 
+fieldset, input, button, select {
+  border: 2px solid #F4C6AC;
+  margin: 0;
+  padding: 10px;
+  background-color: transparent;
+}
+
 .wrapper {
   max-width: 1200px;
   width: 90%;
@@ -310,6 +317,9 @@ h2 {
   font-size: 1.7rem;
 }
 
+header {
+  margin-bottom: 50px;
+}
 header p:first-child {
   margin: 0;
   padding: 10px 0;
@@ -320,14 +330,14 @@ header p:first-child {
 }
 header h1 {
   padding: 30px 0;
-  border-bottom: 2px solid #D4A8BF;
+  border-bottom: 2px solid #F4C6AC;
 }
 header a {
   font-weight: 500;
 }
 
 nav {
-  color: #ACC0F4;
+  color: #D4A8BF;
 }
 
 ul {
@@ -342,7 +352,7 @@ ul {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 15px 0;
-  border-bottom: 2px solid #D4A8BF;
+  border-bottom: 2px solid #F4C6AC;
 }
 ul li {
   margin-left: 30px;
@@ -413,6 +423,15 @@ h2 {
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
   margin: 0;
+  -webkit-transition: -webkit-transform 0.7s ease-in-out;
+  transition: -webkit-transform 0.7s ease-in-out;
+  transition: transform 0.7s ease-in-out;
+  transition: transform 0.7s ease-in-out, -webkit-transform 0.7s ease-in-out;
+}
+.recipeImgs li:hover {
+  z-index: 10;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 .recipeImgs li div {
   height: 500px;
@@ -487,5 +506,59 @@ h2 {
 .ingredientList {
   text-transform: uppercase;
   color: #D4A8BF;
-  border-top: 2px solid #D4A8BF;
+  border-top: 2px solid #F4C6AC;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+form * {
+  margin-bottom: 5px;
+}
+
+input, select {
+  margin-bottom: 20px;
+}
+
+fieldset {
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 48%;
+      flex-basis: 48%;
+}
+
+input[type=submit] {
+  width: 30%;
+  margin: 0 auto;
+  background-color: #F4C6AC;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border: none;
+}
+input[type=submit]:hover {
+  cursor: pointer;
+  -webkit-filter: brightness(1.2);
+          filter: brightness(1.2);
 }

@@ -52,7 +52,7 @@ recipeApp.displayRecipe = (recipeObject) => {
 
     //put html info from the random recipe into the recipe info section
     const recipeInfoHTML = `
-        <img src="${recipeObject.results[recipeNum].image}" alt="Image of ${recipeObject.results[recipeNum].title}">
+        <img src="https://spoonacular.com/recipeImages/${recipeObject.results[recipeNum].id}-636x393.jpg" alt="Image of ${recipeObject.results[recipeNum].title}">
 
         <h2>${recipeObject.results[recipeNum].title}</h2>
 
