@@ -15,7 +15,6 @@ header {
 
     a {
         font-weight: 500;
-        font-size: 1.25rem;
     }
 }
 
@@ -44,13 +43,13 @@ ul {
     flex-direction: row-reverse;
     flex-wrap: wrap;
     align-items: center;
+    padding: 120px 0;
 }
 
 .headerInfoContainer,
 .recipeImgs {
-    width: 48%;
+    width: 50%;
     padding: 0;
-    border: 2px solid red;
 }
 
 h2 {
@@ -67,10 +66,84 @@ h2 {
         padding: 15px 25px;
         font-weight: 400;
         border-radius: 10px;
+        font-weight: 400;
+        letter-spacing: 3px;
     }
 
     p {
         margin: 20px 0 0;
         text-align: center;
+        width: 70%;
     }
+}
+
+.recipeImgs {
+    border-bottom: none;
+    position: relative;
+
+    li {
+        position: absolute;
+        bottom: -50%;
+        transform: translateY(50%);
+        margin: 0;
+
+        div {
+            height: 500px;
+            width: 350px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        img {
+            width: 300px;
+            height: 400px;
+            border-radius: 20px;
+        }
+
+        p {
+            margin: 20px 0 0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+    }
+}
+
+.firstImg {
+    background-color: #F9F2B7;
+    transform: rotate(-25deg) translate(-25px, -120px);
+    transform-origin: bottom right;
+}
+
+.secondImg {
+    background-color: #ACC0F4;
+    transform: rotate(-17deg) translate(-25px, -90px);
+    transform-origin: bottom right;
+}
+
+.thirdImg {
+    background-color: #F4C6AC;
+    transform: rotate(-10deg) translate(-20px, -50px);
+    transform-origin: bottom right;
+}
+
+.fourthImg {
+    background-color: #D4A8BF;
+    transform: rotate(-3deg) translate(-10px, -10px);
+    transform-origin: bottom right;
+}
+
+.fifthImg {
+    background-color: #BEDDD4;
+    transform: rotate(6deg);
+    transform-origin: bottom left;
+}
+
+.ingredientList {
+    text-transform: uppercase;
+    color: $pink;
+    border-top: 2px solid $pink;
 }
