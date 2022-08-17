@@ -517,6 +517,7 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 50px;
 }
 form * {
   margin-bottom: 5px;
@@ -561,4 +562,99 @@ input[type=submit]:hover {
   cursor: pointer;
   -webkit-filter: brightness(1.2);
           filter: brightness(1.2);
+}
+
+.resultsInfo {
+  padding-top: 50px;
+  border-top: 2px dotted rgba(212, 168, 191, 0.5);
+}
+
+.recipeOverallInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.recipeOverallInfo > div:nth-child(1),
+.facts {
+  width: 49%;
+}
+
+.facts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.facts h2 {
+  background-color: #D4A8BF;
+  padding: 5px;
+}
+.facts p {
+  margin: 0 0 10px;
+  padding: 5px;
+}
+.facts em {
+  font-style: normal;
+  font-weight: bold;
+}
+
+.info b {
+  font-weight: 400;
+}
+.info a {
+  text-transform: none;
+  color: #ACC0F4;
+}
+
+h3 {
+  margin: 0 0 20px;
+}
+
+.resultsIngredient {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0;
+  list-style: disc;
+  padding-left: 20px;
+  padding: 0;
+  border-bottom: none;
+  list-style-position: inside;
+}
+.resultsIngredient li {
+  margin: 0;
+}
+
+.resultsIngredients {
+  width: 30%;
+}
+
+.resultsInstructions {
+  width: 63%;
+}
+
+.foodContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 75px;
 }

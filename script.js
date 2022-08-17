@@ -6,7 +6,9 @@ const recipeApp = {};
 //jquery variables
 recipeApp.$resultsInfo = $('.resultsInfo');
 recipeApp.$resultsSteps = $('.resultsSteps');
-recipeApp.$h3 = $('h3');
+recipeApp.$h3Instruction = $('.instruction');
+recipeApp.$h3Ingredient = $('.ingredient');
+recipeApp.$resultsIngredients = $('.resultsIngredient');
 
 //api key
 recipeApp.apiKey = 'c3a2dd22ab68486693f350a7d15abe53';
@@ -23,16 +25,16 @@ recipeApp.recipeSearch = (ingredients, calories, diet) => {
             includeIngredients: ingredients,
             maxCalories: calories,
             addRecipeInformation: true,
+            fillIngredients: true
         }
     }).then(function (recipeResults) {
         //if there are no results: tell the user there are no results
         if (recipeResults.totalResults === 0) {
             recipeApp.$resultsInfo.html(`<h2>There are no recipes based on your inputs.</h2>`);
 
-            recipeApp.$h3.text('');
+            recipeApp.$h3Instruction.text('');
         }
 
-        console.log(recipeResults)
         //if there are results: display the recipe onto the DOM
         recipeApp.displayRecipe(recipeResults);
 
@@ -52,14 +54,17 @@ recipeApp.displayRecipe = (recipeObject) => {
 
     //put html info from the random recipe into the recipe info section
     const recipeInfoHTML = `
-        <img src="https://spoonacular.com/recipeImages/${recipeObject.results[recipeNum].id}-636x393.jpg" alt="Image of ${recipeObject.results[recipeNum].title}">
+        <div class="recipeOverallInfo">
+            <div className="imgContainer">
+                <img src="https://spoonacular.com/recipeImages/${recipeObject.results[recipeNum].id}-636x393.jpg" alt="Image of ${recipeObject.results[recipeNum].title}">
+            </div>
 
-        <h2>${recipeObject.results[recipeNum].title}</h2>
-
-        <div class="facts">
-            <p><em>Calories:</em> ${recipeObject.results[recipeNum].nutrition.nutrients[0].amount}</p>
-            <p><em>Serves:</em> ${recipeObject.results[recipeNum].servings}</p>
-            <p><em>Ready in:</em> ${recipeObject.results[recipeNum].readyInMinutes} minutes</p>
+            <div class="facts">
+                <h2>${recipeObject.results[recipeNum].title}</h2>
+                <p><em>Calories:</em> ${recipeObject.results[recipeNum].nutrition.nutrients[0].amount.toFixed(0)}</p>
+                <p><em>Serves:</em> ${recipeObject.results[recipeNum].servings}</p>
+                <p><em>Ready in:</em> ${recipeObject.results[recipeNum].readyInMinutes} minutes</p>
+            </div>
         </div>
 
         <div class="info">
@@ -70,7 +75,7 @@ recipeApp.displayRecipe = (recipeObject) => {
     //actually putting the info onto the recipe info section
     recipeApp.$resultsInfo.html(recipeInfoHTML);
 
-    recipeApp.$h3.text('Instructions');
+    recipeApp.$h3Instruction.text('Instructions');
 
     //display the recipe's list of steps
     recipeObject.results[recipeNum].analyzedInstructions[0].steps.forEach((step) => {
@@ -79,6 +84,18 @@ recipeApp.displayRecipe = (recipeObject) => {
         
         //display each step into the DOM
         recipeApp.$resultsSteps.append(recipeStep);
+    })
+
+    //putting ingredient onto the dom
+    recipeApp.$h3Ingredient.text('Missing Ingredients');
+
+    //display the recipe's list of ingredients
+    recipeObject.results[recipeNum].missedIngredients.forEach(ingredient => {
+        //save each ingredient to a li
+        const eachIngredient = `<li>${ingredient.original}</li>`;
+
+        //display each ingredient on the dom
+        recipeApp.$resultsIngredients.append(eachIngredient);
     })
 }
 

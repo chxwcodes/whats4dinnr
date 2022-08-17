@@ -1,0 +1,80 @@
+.resultsInfo {
+    padding-top: 50px;
+    border-top: 2px dotted rgba($pink, 0.5);
+}
+.recipeOverallInfo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.recipeOverallInfo>div:nth-child(1),
+.facts {
+    width: 49%;
+
+}
+
+.facts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        background-color: $pink;
+        padding: 5px;
+    }
+    p {
+        margin: 0 0 10px;
+        padding: 5px;
+    }
+
+    em {
+        font-style: normal;
+        font-weight: bold;
+
+    }
+}
+
+.info {
+    b {
+        font-weight: 400;
+    }
+
+    a {
+        text-transform: none;
+        color: $blue;
+    }
+}
+
+h3 {
+    margin: 0 0 20px;
+}
+
+.resultsIngredient {
+    flex-direction: column;
+    margin: 0;
+    list-style: disc;
+    padding-left: 20px;
+    padding: 0;
+    border-bottom: none;
+    list-style-position: inside;
+    li {
+        margin: 0;
+    }
+}
+
+.resultsIngredients {
+    width: 30%;
+}
+
+.resultsInstructions {
+    width: 63%;
+}
+
+.foodContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 75px;
+}
