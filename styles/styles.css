@@ -268,6 +268,7 @@ a:hover {
 }
 
 ul,
+ol,
 li,
 a,
 input {
@@ -322,11 +323,12 @@ header {
 }
 header p:first-child {
   margin: 0;
-  padding: 10px 0;
+  font-size: clamp(0.8rem, 0.76rem + 0.2vw, 1rem);
   text-transform: uppercase;
   text-align: center;
   background-color: #D4A8BF;
   letter-spacing: 3px;
+  padding: 20px;
 }
 header h1 {
   padding: 30px 0;
@@ -507,6 +509,7 @@ h2 {
   text-transform: uppercase;
   color: #D4A8BF;
   border-top: 2px solid #F4C6AC;
+  font-size: clamp(0.8rem, 0.76rem + 0.2vw, 1rem);
 }
 
 form {
@@ -657,4 +660,72 @@ h3 {
   width: 90%;
   margin: auto;
   margin-bottom: 75px;
+}
+
+@media (max-width: 1000px) {
+  .recipeImgs {
+    display: none;
+  }
+  .headerInfo {
+    padding: 50px 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-bottom: 2px dotted #D4A8BF;
+  }
+  .headerInfoContainer {
+    width: 100%;
+  }
+  .recipeOverallInfo {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .recipeOverallInfo > div:nth-child(1),
+.facts {
+    width: 70%;
+  }
+  .recipeOverallInfo > div:nth-child(1) {
+    margin-bottom: 20px;
+  }
+  .ingredientList {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .foodContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .resultsIngredients,
+.resultsInstructions {
+    width: 100%;
+    list-style-position: outside;
+  }
+  .resultsIngredients {
+    margin-bottom: 20px;
+  }
+  fieldset {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  input[type=submit] {
+    width: 80%;
+  }
+}
+@media (max-width: 500px) {
+  nav {
+    display: none;
+  }
 }

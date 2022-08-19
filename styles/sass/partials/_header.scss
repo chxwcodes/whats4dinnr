@@ -3,11 +3,12 @@ header {
     
     p:first-child {
         margin: 0;
-        padding: 10px 0;
+        font-size: clamp(0.8rem, 0.76rem + 0.2vw, 1rem);
         text-transform: uppercase;
         text-align: center;
         background-color: $pink;
         letter-spacing: 3px;
+        padding: 20px;
     }
 
     h1 {
@@ -154,4 +155,5 @@ h2 {
     text-transform: uppercase;
     color: $pink;
     border-top: 2px solid $salmon;
+    font-size: clamp(0.8rem, 0.76rem + 0.2vw, 1rem);
 }
